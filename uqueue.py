@@ -20,9 +20,9 @@ async def on_message(message):
     author_ID = message.author
     author = message.author.mention
     #This will get the bot's ID so it only counts when the bot sends a message
-    user = client.get_user(676230403128033351)
+    user = client.get_user("Your bot's ID")
     #This will insure the bot will start to add users if they say the seed check command and are in a specific channel 
-    if message.content == "!CheckMySeed" and message.channel.id == 713052927841009665: 
+    if message.content == "!CheckMySeed" and message.channel.id == "The channel ID that the bot sends messages in": 
         #This checks the current person being served, and to not re add them in the queue
         for q in queue:
             if author == queue[0]:
@@ -36,6 +36,7 @@ async def on_message(message):
                 queue.append(f'{message.author.mention}')
     #When the bot starts to search for the user, the code will wait 75 sec (aprox time the bot takes to trade) and remove that person from the queue
     if message.content.endswith("My in game name is: Darkrai.") and author_ID == user:
+        #You can change the time, I would reccomend at least 70
         await asyncio.sleep(75)
         queue.remove(queue[0])
         print(queue)
