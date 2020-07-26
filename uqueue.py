@@ -1,4 +1,4 @@
-#Multi-use queue-system in Lanturn bot. Written by Dizzy#9275
+#Multi-use queue-system in Lanturn bot. developed by Dizzy#9275
 import discord
 from discord.ext import commands
 import asyncio
