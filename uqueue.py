@@ -50,7 +50,7 @@ async def List(ctx):
     queue_list = []
     #Loop until every object/user in the queue is grabbed
     for q in queue:
-            #Grab the index of all the cuurent objects/users in the queue list [], sliced bewtween 0 and the size of the queue. Add 1 to the index because python starts the index at 0
+            #Grab the index of all the current objects/users in the queue list [], sliced bewtween 0 and the size of the queue. Add 1 to the index because python starts the index at 0
             content = queue[0:len(queue)].index(q) + 1
             #Convert index to a str, and add the user's @
             content_2 = str(content) + ":" + q
