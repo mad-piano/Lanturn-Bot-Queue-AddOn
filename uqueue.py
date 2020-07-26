@@ -43,7 +43,7 @@ async def on_message(message):
     await client.process_commands(message)
 
 
-#Will check the size of the queue and post the queue list accordingly, a little redundent :-(
+
 @client.command(pass_context=True)
 async def List(ctx):
     #This will add the users in the queue list, with additional info
