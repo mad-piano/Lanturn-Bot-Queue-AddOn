@@ -1,6 +1,6 @@
 # Lanturn-Bot-Queue-AddOn
 This is additional code that will add features that the Original Lanturn bot intended, but never implemented.
-You may have realized that Lanturn bot's "print queue", never worked. This code will help fix that issue.
+You may have realized that Lanturn bot's "print queue", never worked. This code will fix that issue.
 
 **You need to edit certain placeholders in the code, it is pointed out in the code**
 
