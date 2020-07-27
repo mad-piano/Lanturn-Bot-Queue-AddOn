@@ -71,21 +71,19 @@ async def List(ctx):
 @client.command(pass_context=True)
 async def MyPlace(ctx):
     author_ctx = ctx.message.author.mention
-    #Grab the index of the user, add 1 to the index because python starts the index at 0
-    placement = queue.index(author_ctx) + 1
-    try:
-        if len(queue) == 0:
-            await ctx.send("`No one is currently in the queue!`")
-        else:
-            embed = discord.Embed(
-                title = f"**Specific Position in Queue:**",
-                description = f"{author_ctx}, your placement in the queue is: **{placement}**",
-                colour = discord.Colour.purple(),
-            )
-            embed.timestamp = datetime.datetime.utcnow()
-            await ctx.send(embed=embed)
-    except ValueError:
-        await ctx.send(f"{author_ctx}, you're not in the queue!")
+    #If the queue has more than 0 users, grab the index of the user, add 1 to the index because python starts the index at 0
+    if len(queue) > 0:
+        placement = queue.index(author_ctx) + 1
+    elif len(queue) == 0:
+        await ctx.send("`No one is currently in the queue!`")
+    else:
+        embed = discord.Embed(
+            title = f"**Specific Position in Queue:**",
+            description = f"{author_ctx}, your placement in the queue is: **{placement}**",
+            colour = discord.Colour.purple(),
+        )
+        embed.timestamp = datetime.datetime.utcnow()
+        await ctx.send(embed=embed)
 
 @client.command(pass_context=True)
 async def QueueSize(ctx):
