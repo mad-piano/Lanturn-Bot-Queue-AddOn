@@ -16,7 +16,7 @@ You may have realized that Lanturn bot's "print queue", never worked. This code 
 >How do I implement this code to my Lanturn bot?
 
 Replace the **on_message event** in the **bot.py** file in Lanturn bot, and add the one I created.
-Add the lists in the same file up by the imports; add the commands I created somewhere appropriate in the **RaidCommands.py** file.
+Add the commands I created somewhere appropriate in the **RaidCommands.py** file.
 
 >Why is there no command to remove a user from the queue?
 
