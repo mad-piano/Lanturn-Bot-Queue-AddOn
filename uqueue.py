@@ -23,13 +23,10 @@ async def on_message(message):
     user = client.get_user("Your bot's ID")
     #This will insure the bot will start to add users if they say the seed check command and are in a specific channel 
     if message.content == "!CheckMySeed" and message.channel.id == "The channel ID that the bot sends messages in": 
-        #This checks the current person being served, and to not re add them in the queue
+        #If the user is already in queue, don't add them twice
         for q in queue:
-            if author == queue[0]:
+            if q == str(message.author.mention) in queue:
                     return
-            #If the user is already in queue, remove the extra value in the queue list []
-            elif q == str(message.author.mention) in queue:
-                queue.remove(f'{message.author.mention}')
         else:
             #This will add them in the queue if they are currently not in the list and the queue is not maxed
             if len(queue) < queue_size:
