@@ -90,7 +90,7 @@ async def QueueSize(ctx):
     #Takes the size of the queue and reports it back to the user
     embed = discord.Embed(
         title = f"**Queue Size:**",
-        description = f"The queue size is: {len(queue)}",
+        description = f"The queue size is: **{len(queue)}**",
         colour = discord.Colour.purple(),
     )
     embed.timestamp = datetime.datetime.utcnow()
