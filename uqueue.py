@@ -62,7 +62,7 @@ async def List(ctx):
         #Format the objects in the new list to look nice
         embed = discord.Embed(
             title = "**Queue List:**",
-            description = '\n'.join(queue_list),
+            description = "**" + '\n'.join(queue_list) + "**",
             colour = discord.Colour.purple(),
         )
         embed.timestamp = datetime.datetime.utcnow()
