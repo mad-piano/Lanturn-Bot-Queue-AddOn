@@ -2,7 +2,7 @@
 This is additional code that will add features that the Original Lanturn bot intended, but never implemented.
 You may have realized that Lanturn bot's "print queue", never worked. This code will fix that issue.
 
-**You need to edit certain placeholders in the code, it is pointed out in the code**
+**You need to edit certain placeholders in the code, it is pointed out in the source code**
 
 >What's new/different than the previous Lanturn bot?
 * Added new commands
